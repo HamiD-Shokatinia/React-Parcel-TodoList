@@ -3,7 +3,8 @@ import { setItem } from "../../utils/local-storage.util";
 
 import { Maybe } from "../Maybe";
 
-function TableRender(initialTask, setInitialTask) {
+function TableRender({initialTask, setInitialTask}) {
+  console.log(initialTask)
   function handleDone(e, id) {
     e.preventDefault();
     console.log(initialTask);
@@ -40,6 +41,7 @@ function TableRender(initialTask, setInitialTask) {
         </tr>
       </thead>
       <Maybe condition={initialTask.length}>
+        
         <tbody>
           {initialTask.map((item) => {
             return (
@@ -69,7 +71,7 @@ function TableRender(initialTask, setInitialTask) {
                   </h6>
                 </td>
                 <td className="align-middle fs-4">
-                  <div className="d-flex ">
+                  <div className=" text-center ">
                     <a href="#!" data-mdb-toggle="tooltip" title="Done">
                       <i
                         className={`bi bi-check-circle ${

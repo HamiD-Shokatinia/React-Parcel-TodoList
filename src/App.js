@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Counter from "./Component/Counter";
+import FilterTask from "./Component/Filter";
 import Input from "./Component/inputForm";
 import { Maybe } from "./Component/Maybe";
 import TableRender from "./Component/Tasks";
@@ -28,7 +29,10 @@ export function App() {
                   initialTask={initialTask}
                   setInitialTask={setInitialTask}
                 ></Input>
-
+                <FilterTask
+                  initialTask={initialTask}
+                  setInitialTask={setInitialTask}
+                ></FilterTask>
                 <TableRender
                   initialTask={initialTask}
                   setInitialTask={setInitialTask}
